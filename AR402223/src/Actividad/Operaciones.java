@@ -47,26 +47,65 @@ public class Operaciones {
 		if((numero1 > 0)  && (numero2 > 0)) {
 			
 			//Sumar los dos numeros
-			suma = numero1 + numero2;
+			suma = extractedSuma(numero1, numero2);
 			
 			//Restar los dos numeros
-			resta = numero1 - numero2;
+			resta = extractedResta(numero1, numero2);
 			
 			//Multiplicar los dos numeros
-			resMultiplicar =  numero1 * numero2;
+			resMultiplicar = extractedMutiplicar(numero1, numero2);
 			
 			//Devidir los dos numeros
-			resDivision =  numero1 / numero2;
+			resDivision = extractedDividir(numero1, numero2);
 		}
 
+		extracted(suma, resta, resMultiplicar, resDivision);
+		
+		
+		
+	}
+
+
+
+	private static float extractedDividir(int numero1, int numero2) {
+		float resDivision;
+		resDivision = (float) numero1 / numero2;
+		return resDivision;
+	}
+
+
+
+	private static int extractedMutiplicar(int numero1, int numero2) {
+		int resMultiplicar;
+		resMultiplicar =  numero1 * numero2;
+		return resMultiplicar;
+	}
+
+
+
+	private static int extractedResta(int numero1, int numero2) {
+		int resta;
+		resta = numero1 - numero2;
+		return resta;
+	}
+
+
+
+	private static int extractedSuma(int numero1, int numero2) {
+		int suma;
+		//Sumar los dos numeros
+		suma = numero1 + numero2;
+		return suma;
+	}
+
+
+
+	private static void extracted(int suma, int resta, int resMultiplicar, float resDivision) {
 		//mostrar los resultados en pantalla
 		System.out.println("la suma es :  " + suma);
 		System.out.println("la resta es :  " + resta);
 		System.out.println("la multiplicar es :  " + resMultiplicar);
 		System.out.println("la devecion es :  " + resDivision);
-		
-		
-		
 	}
 
 }
